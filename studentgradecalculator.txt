@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class GradeCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input the weights of different categories
+        System.out.println("Enter the weight of exams (in percentage): ");
+        double examWeight = scanner.nextDouble();
+        System.out.println("Enter the weight of homework (in percentage): ");
+        double homeworkWeight = scanner.nextDouble();
+        System.out.println("Enter the weight of projects (in percentage): ");
+        double projectWeight = scanner.nextDouble();
+
+        // Input grades for each category
+        System.out.println("Enter the grade for exams (out of 100): ");
+        double examGrade = scanner.nextDouble();
+        System.out.println("Enter the grade for homework (out of 100): ");
+        double homeworkGrade = scanner.nextDouble();
+        System.out.println("Enter the grade for projects (out of 100): ");
+        double projectGrade = scanner.nextDouble();
+
+        // Calculate the final grade
+        double finalGrade = (examGrade * examWeight / 100) + (homeworkGrade * homeworkWeight / 100) + (projectGrade * projectWeight / 100);
+
+        // Output the final grade
+        System.out.println("Final Grade: " + finalGrade);
+
+        scanner.close();
+    }
+}
